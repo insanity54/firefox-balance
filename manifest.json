@@ -1,1 +1,22 @@
 
+
+{
+  "permissions": ["contextMenus"],
+  "manifest_version": 2,
+  "name": "tab audio balance",
+  "version": "1.0",
+
+  "description": "Allows you to balance the left/right stereo audio in firefox tabs. Useful for dual-watching videos",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["firefox-balance.js"]
+    }
+  ]
+
+}
